@@ -1,0 +1,51 @@
+:root{
+    --fontcolor: #e3f3a6;
+    --backgroundcolor: #34d334;
+}
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'roboto', sans-serif;
+    box-sizing: border-box;
+    transition: all .2s linear;
+    text-transform: capitalize;
+    text-decoration: none;
+}
+html{
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    padding: 2rem 7%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #e3f3a6;
+}
+header #logo{
+    font-size: 3rem;
+    color: blue;
+}
+header #logo span{
+    color: rgb(36, 148, 246);
+}
+header .navbar a{
+    font-size: 2rem;
+    color: var(--fontcolor);
+    margin-left: 1rem;
+}
+.icons i{
+    font-size: 2rem;
+    color: var(--fontcolor);
+    margin-left: 1rem;
+}
+header #menu_bars{
+    font-size:2 rem ;
+    
+}
