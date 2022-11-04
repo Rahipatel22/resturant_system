@@ -58,7 +58,7 @@ if (isset($_POST['email']) && isset($_POST['password'])) {
                 $_SESSION['emailid'] = $row['email'];
                 setcookie('email',$row['email'], time() + (86400 * 30), "/");
                 echo $_SESSION['emailid'];
-                header("Location: /projext/");
+                header("Location: /project/");
 
                 exit();
 
