@@ -25,11 +25,11 @@
             <a href="#blog">blog</a>
             <?php
                 session_start();
-                if (!isset($_SESSION['emailid'])) {
+                if (isset($_SESSION['emailid'])) {
                     echo "<a href='logout.php'>logout</a>";
                 }
                 else{
-                    echo "<a href='login.php'>login</a>";
+                    echo "<a href='loginpage.php'>login</a>";
                 }
             ?>
         </nav>

@@ -31,14 +31,14 @@ if (isset($_POST['email']) && isset($_POST['password'])) {
 
     if (empty($email)) {
 
-        header("Location: index.php?error=User Name is required");
+        header("Location: loginpage.php?error=User Name is required");
 
         exit();
 
     }
     else if(empty($pass)){
 
-        header("Location: index.php?error=Password is required");
+        header("Location: loginpage.php?error=Password is required");
 
         exit();
 
@@ -54,20 +54,17 @@ if (isset($_POST['email']) && isset($_POST['password'])) {
             $row = mysqli_fetch_assoc($result);
 
             if ($row['email'] === $email && $row['password'] === $pass) {
-
                 echo "Logged in!";
-
                 $_SESSION['emailid'] = $row['email'];
-
-                
-
-                header("Location: /project/");
+                setcookie('email',$row['email'], time() + (86400 * 30), "/");
+                echo $_SESSION['emailid'];
+                header("Location: /projext/");
 
                 exit();
 
             }else{
 
-                header("Location: index.php?error=Incorect User name or password");
+                header("Location: loginpage.php?error=Incorect User name or password");
 
                 exit();
 
@@ -75,7 +72,7 @@ if (isset($_POST['email']) && isset($_POST['password'])) {
 
         }else{
 
-            header("Location: index.php?error=Incorect User name or password");
+            header("Location: loginpage.php?error=Incorect User name or password");
 
             exit();
 
